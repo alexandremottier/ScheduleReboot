@@ -16,4 +16,4 @@ The time must be formatted as a decimal number (2 for 2:00 ; 14,5 for 14:30).
 2 ways are available : the ps1 (powershell file), or the executable file.
 Both are doing the same, but the display is different.
 
-Feel free to contact me at contact@alexandremottier.fr if you have any question.
+Feel free to contact me at contact@am-networks.fr if you have any question.
