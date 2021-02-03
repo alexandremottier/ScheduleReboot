@@ -15,5 +15,6 @@ if (!$Time)
 # Envoi de la commande de shutdown basé sur l'heure saisie
 shutdown -r -t ([decimal]::round(((Get-Date).AddDays($Date).Date.AddHours($Time) - (Get-Date)).TotalSeconds))
 
-# Message affichant la bonne prise en compte de la demande
-Write-Host "Le redémarrage du serveur a bien été programmé pour $Time h !"
+# Message affichant la bonne ou mauvaise prise en compte de la demande
+if ($LASTEXITCODE -eq "0") { write-host "La planification a bien été prise en compte" }
+else { write-host "La planification a rencontré une erreur. Un redémarrage est-il déjà programmé pour cette machine ?" }
